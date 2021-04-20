@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blood_pressure_data_point_set
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='blood_pressure_data_point_set.xsd'>
+    <id>abc</id>
+    <blood_pressure_data_point>
+	<sys>120</sys>
+	<dia>80</dia>
+	<pulse>45</pulse>
+	<timestamp>2021-04-20T08:00:00</timestamp>
+    </blood_pressure_data_point>
+    <blood_pressure_data_point>
+	<sys>120</sys>
+	<dia>80</dia>
+	<pulse>45</pulse>
+	<timestamp>2021-04-20T08:03:00</timestamp>
+    </blood_pressure_data_point>       
+</blood_pressure_data_point_set>

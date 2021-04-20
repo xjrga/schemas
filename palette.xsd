@@ -1,4 +1,4 @@
-<xsd:schema version="1.0"
+<xsd:schema version="0.1"
 	    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:element name="palette">
 	<xsd:annotation>
