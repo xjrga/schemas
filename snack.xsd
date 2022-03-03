@@ -16,15 +16,15 @@
                 <!-- food list -->
                 <xsd:element name="mix_food_list" type="mix_food_list" minOccurs="1" maxOccurs="1"/>
                 <!-- nutrient constraint -->
-                <xsd:element name="nutrient_constraint_list" type="nutrient_constraint_list" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="nutrient_constraint_list" type="nutrient_constraint_list" minOccurs="0" maxOccurs="1"/>
                 <!-- food nutrient constraint -->
-                <xsd:element name="food_nutrient_constraint_list" type="food_nutrient_constraint_list" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="food_nutrient_constraint_list" type="food_nutrient_constraint_list" minOccurs="0" maxOccurs="1"/>
                 <!-- food nutrient ratio constraint -->
-                <xsd:element name="food_nutrient_ratio_constraint_list" type="food_nutrient_ratio_constraint_list" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="food_nutrient_ratio_constraint_list" type="food_nutrient_ratio_constraint_list" minOccurs="0" maxOccurs="1"/>
                 <!-- nutrient ratio constraint -->
-                <xsd:element name="nutrient_ratio_constraint_list" type="nutrient_ratio_constraint_list" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="nutrient_ratio_constraint_list" type="nutrient_ratio_constraint_list" minOccurs="0" maxOccurs="1"/>
                 <!-- percent of total nutrient constraint -->
-                <xsd:element name="nutrient_percent_constraint_list" type="nutrient_percent_constraint_list" minOccurs="1" maxOccurs="1"/>                
+                <xsd:element name="nutrient_percent_constraint_list" type="nutrient_percent_constraint_list" minOccurs="0" maxOccurs="1"/>                
             </xsd:sequence>
         </xsd:complexType>
         <xsd:unique name="Uniquely_Specified_Food">
