@@ -1,6 +1,5 @@
 <xsd:schema version="1.0"
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <!-- . -->
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">    
     <xsd:element name="potatosql">
         <xsd:annotation>
             <xsd:documentation>
@@ -15,12 +14,12 @@
                 <!-- schema -->
                 <xsd:element name="schema" type="schema" minOccurs="1" maxOccurs="1"/>
                 <!-- table list -->
-                <xsd:element name="table_list" type="table_list" minOccurs="1" maxOccurs="1"/>
-                <!-- relationship list -->
-                <xsd:element name="relationship_list" type="relationship_list" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="table_list" type="table_list" minOccurs="1" maxOccurs="1"/>                
                 <!-- table key list -->
                 <xsd:element name="key_list" type="key_list" minOccurs="1" maxOccurs="1"/>
-                <!-- relationship key pair list -->
+                <!-- relationship list -->
+                <xsd:element name="relationship_list" type="relationship_list" minOccurs="0" maxOccurs="1"/>                
+                <!-- key pair list -->
                 <xsd:element name="key_pair_list" type="key_pair_list" minOccurs="0" maxOccurs="1"/>
             </xsd:sequence>
         </xsd:complexType>
@@ -69,18 +68,30 @@
             <xsd:element name="table" type="table" minOccurs="1" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
+    <!-- table key list -->
+    <xsd:complexType name="key_list">
+        <xsd:sequence>
+            <xsd:element name="key" type="key" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>    
+    <!-- relationship list -->
+    <xsd:complexType name="relationship_list">
+        <xsd:sequence>
+            <xsd:element name="relationship" type="relationship" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- key pair list -->
+    <xsd:complexType name="key_pair_list">
+        <xsd:sequence>
+            <xsd:element name="key_pair" type="key_pair" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>      
     <!-- table -->
     <xsd:complexType name="table">
         <xsd:sequence>
             <xsd:element name="schema_id" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
             <xsd:element name="table_id" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
             <xsd:element name="table_name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <!-- relationship list -->
-    <xsd:complexType name="relationship_list">
-        <xsd:sequence>
-            <xsd:element name="relationship" type="relationship" minOccurs="0" maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
     <!-- relationship -->
@@ -102,12 +113,6 @@
             <xsd:enumeration value = "1"/>
         </xsd:restriction>
     </xsd:simpleType>
-    <!-- table key list -->
-    <xsd:complexType name="key_list">
-        <xsd:sequence>
-            <xsd:element name="key" type="key" minOccurs="1" maxOccurs="unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
     <!-- table key -->
     <xsd:complexType name="key">
         <xsd:sequence>
@@ -140,12 +145,6 @@
             <xsd:enumeration value = "6"/>            
         </xsd:restriction>
     </xsd:simpleType>
-    <!-- relationship key pair list -->
-    <xsd:complexType name="key_pair_list">
-        <xsd:sequence>
-            <xsd:element name="key_pair" type="key_pair" minOccurs="1" maxOccurs="unbounded"/>
-        </xsd:sequence>
-    </xsd:complexType>
     <!-- key pair -->
     <xsd:complexType name="key_pair">
         <xsd:sequence>
@@ -156,6 +155,5 @@
             <xsd:element name="parent_key_id" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
             <xsd:element name="child_key_id" type="xsd:nonNegativeInteger" minOccurs="1" maxOccurs="1"/>
         </xsd:sequence>
-    </xsd:complexType>
-    <!-- . -->
+    </xsd:complexType>    
 </xsd:schema>
