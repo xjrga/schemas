@@ -27,7 +27,7 @@
         <xsd:unique name="uniquely_identified_table">
             <xsd:selector xpath="table_list/table"/>
             <xsd:field xpath="schema_id"/>
-            <xsd:field xpath="table_ide"/>
+            <xsd:field xpath="table_id"/>
         </xsd:unique>
         <!-- uniquely identified relationship -->
         <xsd:unique name="uniquely_identified_relationship">
